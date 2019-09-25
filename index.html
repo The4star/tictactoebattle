@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Schoolbell&display=swap" rel="stylesheet">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="message">
+        <h1>Tic Tac Toe Battle</h1>
+    </div>
+    <div class="gameborder">
+        <div class="blackboard">
+            <div class="menu">
+                <h2>Ready to Play?</h2>
+                <h2 id="start-button">Start</h2>
+            </div>
+            <div class="player-select">
+                <h2>Player One, choose your Weapon!</h2>
+                <div id="player-options">
+                    <h2 class="button">X</h2>
+                    <h2 class="button">O</h2>
+                </div>
+            </div>
+            <div class="gameboard">
+                <div class="game-square" id="one" data-value="1"></div>
+                <div class="game-square" id="two" data-value="2"></div>
+                <div class="game-square" id="three" data-value="3"></div>
+                <div class="game-square" id="four" data-value="4"></div>
+                <div class="game-square" id="five" data-value="5"></div>
+                <div class="game-square" id="six" data-value="6"></div>
+                <div class="game-square" id="seven" data-value="7"></div>
+                <div class="game-square" id="eight" data-value="8"></div>
+                <div class="game-square" id="nine" data-value="9"></div>
+            </div>
+            <div class="play-again">
+                <h2>Would you like to play again?</h2>
+                <div id="play-again-options">
+                    <h2 class="again-button">Yes</h2>
+                    <h2 class="again-button">No</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./tictactoe.js"></script>
+</body>
+</html>

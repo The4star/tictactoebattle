@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("./img/battle\ background.jpg") no-repeat center center fixed;;
+    /* background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.8) 0%, rgba(218, 218, 218, 0.8) 100%); */
+}
+
+h1 {
+    text-shadow: 2px 2px 7px black;
+    font-size: 50px;
+    animation: appear 2s;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.message {
+    font-family: 'Roboto', sans-serif;
+    z-index: 0;
+    color: #fafaff;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(27, 56, 208, 0.8) 0%, rgba(29, 58, 208, 0.8) 0.01%, rgba(14, 42, 189, 0.8) 100%);
+    border-radius: 10px 10px 0px 0px;
+    padding: 20px;
+    box-shadow: 5px 5px 20px 0px black; 
+    transition: 2s;   
+}
+
+.gameborder {
+    width: 40%;
+    height: 70%;
+    z-index: 1;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(240, 180, 135, 0.8) 0%, rgba(219, 152, 101, 0.8) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px 0px black, inset 0px 0px 10px black;
+}
+
+.blackboard {
+    position: relative;
+    font-family: 'Schoolbell', cursive;
+    width: 90%;
+    height: 90%;
+    color: #fafaff;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(40, 61, 31, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 2;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    opacity: .7;
+    animation: appear 1s;
+}
+
+.menu-done {
+    position: absolute;
+    height: 40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    opacity: .7;
+    animation: disappear 1s;
+}
+
+.display-none {
+    display: none;
+}
+
+.player-select {
+    height: 40%;
+    text-align: center;
+    display:none;
+    opacity: .7;
+    animation: appear 1s;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.player-select-active {
+    height: 40%;
+    text-align: center;
+    display:flex;
+    opacity: .7;
+    animation: appear 1s;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.play-again {
+    height: 40%;
+    text-align: center;
+    display:none;
+    opacity: .7;
+    animation: appear 1s;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index:2;
+}
+
+.play-again-active {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display:flex;
+    animation: appear 1s;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index:2;
+}
+
+#player-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#play-again-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#start-button, .button, .again-button{
+    transition: .7s;
+    padding: 20px 50px;
+    border-radius: 100px;
+}
+
+#start-button:hover, .button:hover, .again-button:hover{
+    border-radius: 100px;
+    border: 3px dotted #fafaff;
+    padding: 20px 50px;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.gameboard {
+    width:95%;
+    height: 95%;
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    animation: appear 2s;
+}
+
+.gameboard-active {
+    width:95%;
+    height: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    animation: appear 2s;
+}
+
+.game-square {
+    border: 2px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 120px;
+    opacity: .7;
+}
+
+#one {
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+
+#two {
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+#three {
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+}
+
+#four {
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+}
+
+#five {
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+}
+
+#six {
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+}
+#seven {
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    
+}
+
+#eight {
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+}
+
+#nine {
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+}
+/* animation */
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+   
+    100% {
+        opacity: 1; 
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+   
+    100% {
+        opacity: 0; 
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .gameborder {
+        min-width:95vw;
+    }
+
+    .game-square {
+        font-size: 100px;
+    }
+
+    h1 { 
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+  }
