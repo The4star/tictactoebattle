@@ -137,6 +137,11 @@ h2 {
     z-index:2;
 }
 
+.game-chooser {
+    display: flex;
+    text-align: center;
+}
+
 #player-options {
     display: flex;
     flex-direction: row;
@@ -151,13 +156,13 @@ h2 {
     justify-content: space-around;
 }
 
-#start-button, .button, .again-button{
+.start-buttons, .button, .again-button{
     transition: .7s;
     padding: 20px 50px;
     border-radius: 100px;
 }
 
-#start-button:hover, .button:hover, .again-button:hover{
+.start-buttons:hover, .button:hover, .again-button:hover{
     border-radius: 100px;
     border: 3px dotted #fafaff;
     padding: 20px 50px;
