@@ -378,6 +378,8 @@ const resetGame = (e) => {
             cpuWeapon = undefined;
             cpuMoves = [];
             playerOneTurn = true;
+            cpuFails = 0;
+            singlePlayerGame = false;
             playAgain.classList = 'play-again';
             gameBoard.classList = 'gameboard';
             gameSquare.forEach(square => {
